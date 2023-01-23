@@ -10,6 +10,87 @@
 
 <body>
 
+    <script>
+        // Задание 1
+
+        const password = 'pass';
+        let inputPassword = prompt('Введите пароль', '');
+
+        (password === inputPassword) ? console.log('Пароль введен верно')
+            : console.log('Пароль введен неправильно');
+
+        // Задание 2
+
+        const c = 9;
+
+        (c > 0 && c < 10) ? console.log('Верно')
+            : console.log('Неверно')
+
+        // Проверка задания 2
+        const debugC = [0, 10, -3, 2];
+        for (let i = 0; i < 4; i++) {
+            (debugC[i] > 0 && debugC[i] < 10) ? console.log('Верно')
+                : console.log('Неверно')
+        }
+        // Задание 3
+
+        const d = 15;
+        const e = 110;
+
+        (d > 100 || e > 100) ? console.log('Верно')
+            : console.log('Неверно');
+
+        // Задание 4
+
+        let a = '2';
+        let b = '3';
+        alert(+a + +b);
+
+        // Задание 5
+
+        const monthNumber = +prompt('Введите номер месяца', '1');
+        console.log(getSeason(monthNumber));
+        const debugMonthNumber = ['Строка', 0, 1, 2, 3, 4, 5,
+            6, 7, 8, 9, 10, 11, 12, 13, null];
+
+        // Проверка задания 5
+        for (let i = -1; i < debugMonthNumber.length; i++) { //включая udefind значение
+            console.log(getSeason(debugMonthNumber[i]));
+        }
+
+        function getSeason(monthNumber) {
+            if (isNaN(monthNumber)
+                || monthNumber < 1
+                || monthNumber > 12) {
+                return ('Неправильно введен номер месяца. ' +
+                    'Поддерживаются только числа от 1-го до 12-ти, ' +
+                    'введенные арабскими цифрами.');
+            } else {
+                switch (monthNumber) {
+                    case 12:
+                    case 1:
+                    case 2:
+                        return ('Сезон - зима');
+                    case 3:
+                    case 4:
+                    case 5:
+                        return ('Сезон - весна');
+                    case 6:
+                    case 7:
+                    case 8:
+                        return ('Сезон - лето');
+                    case 9:
+                    case 10:
+                    case 11:
+                        return ('Сезон - осень');
+
+                }
+            }
+        }
+
+        // Задание 7
+
+    </script>
 </body>
 
 </html>
