@@ -54,7 +54,7 @@
             6, 7, 8, 9, 10, 11, 12, 13, null];
 
         // Проверка задания 5
-        for (let i = -1; i < debugMonthNumber.length; i++) { //включая udefind значение
+        for (let i = -1; i < debugMonthNumber.length; i++) { //включая udefined значение i = -1
             console.log(getSeason(debugMonthNumber[i]));
         }
 
@@ -88,8 +88,51 @@
             }
         }
 
-        // Задание 7
+        // Задание 7 
+        // Долго не мог понять почему NaN не равно NaN,
+        // прошел все стадии от гнева до смирения
+        // и только после всего узрел в этом хоть какую-то логику.
+        const number = +prompt('Введите число');
+        const debugNumber = ['Строка', -2, -1, 0, 11, 222]
 
+        console.log(isEven(number));
+
+        // Проверка задания 7
+        for (let i = -1; i < debugNumber.length; i++) { //включая udefined значение i = -1
+            console.log(isEven(debugNumber[i]));
+        }
+
+        function isEven(number) {
+            if (+number !== +number) {
+                return ('Вы ввели не число');
+            }
+            if (number % 2) {
+                return ('Нечетное');
+            }
+            return ('Четное');
+        }
+
+        // Задание 8
+
+        let clientOS = 0; // iOS
+        // clientOS = 1; // Android
+        clientOS ? console.log('Установите версию приложения для Android по ссылке')
+            : console.log('Установите версию приложения для iOS по ссылке');
+
+        // Задание 9
+
+        let clientDeviceYear = 2015;
+        clientOS = 1;
+
+        if (clientOS && clientDeviceYear >= 2015) {
+            console.log('Установите версию приложения для Android по ссылке');
+        } else if (clientOS) {
+            console.log('Установите облегченную версию приложения для Android по ссылке');
+        } else if (clientDeviceYear >= 2015) {
+            console.log('Установите версию приложения для iOS по ссылке');
+        } else {
+            console.log('Установите облегченную версию приложения для iOS по ссылке');
+        }
     </script>
 </body>
 
