@@ -24,7 +24,7 @@ body {
 }
 
 .top {
-  background: url(../img/background_top.jpg) center no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%), url(0001.jpg);
+  background: url(../img/background_top.jpg) center/cover no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%), url(0001.jpg);
   height: 1024px;
 }
 .top__header {
@@ -61,7 +61,6 @@ body {
 }
 
 .menu {
-  height: 556px;
   background-color: #000915;
   padding-top: 128px;
   padding-bottom: 128px;
@@ -95,4 +94,31 @@ body {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
+}
+
+@media (max-width: 425px) {
+  .center {
+    padding-left: calc(50% - 171.5px);
+    padding-right: calc(50% - 171.5px);
+  }
+  .top {
+    height: 735px;
+    background: url(../img/background_top_mobile.jpg) center/cover no-repeat;
+    text-align: center;
+  }
+  .top__header {
+    padding-top: 240px;
+    max-width: 780px;
+  }
+  .top__heading {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .top__lead {
+    max-width: 480px;
+    margin-top: 32px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+  }
 }/*# sourceMappingURL=style.css.map */
