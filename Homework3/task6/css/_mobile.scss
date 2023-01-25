@@ -1,0 +1,30 @@
+@media (max-width: 425px) {
+    .center {
+        padding-left: calc(50% - 171.5px);
+        padding-right: calc(50% - 171.5px);
+    }
+
+    .top {
+        height: 735px;
+        background: url(../img/background_top_mobile.jpg) center / cover no-repeat;
+        text-align: center;
+
+        &__header {
+            padding-top: 240px;
+            max-width: 780px;
+        }
+
+        &__heading {
+            font-size: 32px;
+            line-height: 39px;
+        }
+
+        &__lead {
+            max-width: 480px;
+            margin-top: 32px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+}
