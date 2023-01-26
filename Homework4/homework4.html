@@ -1,17 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework4</title>
 </head>
+
 <body>
 
     <script>
 
+        // Админов нельзя назвать простыми людьми. 
+        // Ведь только у них, когда все висит, секс только начинается!
+
+
+
         // ЗАДАНИЕ 1
 
+        // Огромный соблазн просто написать console.log дважды))
+
+        for (let i = 0; i < 2; i++) {
+            console.log('Привет');
+        }
+
+        // ЗАДАНИЕ 2
+
+        for (let i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+
+        // ЗАДАНИЕ 3
+
+        for (let i = 7; i <= 22; i++) {
+            console.log(i);
+        }
+
+        // ЗАДАНИЕ 4
+
+        let obj = {
+            Коля: '200',
+            Вася: '300',
+            Петя: '400',
+        }
+
+        for (name in obj) {
+            console.log(`${name} — зарплата ${obj[name]} долларов.`)
+        }
+
+        // ЗАДАНИЕ 5
+
+        const n = 1000;
+        let num = 0;
+        let result = n;
+
+        do {
+            num++;
+            result /= 2;
+        } while (result >= 50);
+
+        console.log(`Получившееся число: ${result}`);
+        console.log(`Количество итераций: ${num}`);
+
+        // ЗАДАНИЕ 6
+
+        const firstFridayDate = 2;
+        const lengthOfMonth = 31;
+        const weekLength = 7;
+
+        for (let i = firstFridayDate; i <= lengthOfMonth; i += weekLength) {
+            console.log(`Сегодня пятница, ${i}-е число. Необходимо подготовить отчет.`)
+        }
     </script>
 </body>
+
 </html>
