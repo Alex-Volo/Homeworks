@@ -27,4 +27,19 @@
             line-height: 22px;
         }
     }
+
+    .game-seasons {
+        padding-top: 50px;
+        padding-bottom: 85px;
+        text-align: center;
+
+        &__info {
+            align-items: center;
+        }
+
+        &__img {
+            margin-top: 64px;
+            max-width: 344px;
+        }
+    }
 }
