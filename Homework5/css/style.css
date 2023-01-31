@@ -24,7 +24,7 @@ body {
 }
 
 .top {
-  background: url(../img/background_top.jpg) center/cover no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%), url(0001.jpg);
+  background: url(../img/background_top.jpg) center/cover no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%);
   height: 1024px;
 }
 .top__header {
@@ -148,7 +148,7 @@ body {
   max-width: 485px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .center {
     padding-left: calc(50% - 171.5px);
     padding-right: calc(50% - 171.5px);
@@ -180,6 +180,14 @@ body {
   }
   .game-seasons__info {
     align-items: center;
+  }
+  .game-seasons__heading {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .game-seasons__text {
+    font-size: 14px;
+    line-height: 22px;
   }
   .game-seasons__img {
     margin-top: 64px;

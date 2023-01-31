@@ -1,4 +1,4 @@
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .center {
         padding-left: calc(50% - 171.5px);
         padding-right: calc(50% - 171.5px);
@@ -35,6 +35,16 @@
 
         &__info {
             align-items: center;
+        }
+
+        &__heading {
+            font-size: 32px;
+            line-height: 39px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
         }
 
         &__img {
