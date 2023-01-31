@@ -1,4 +1,4 @@
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .center {
         padding-left: calc(50% - 171.5px);
         padding-right: calc(50% - 171.5px);
@@ -25,6 +25,31 @@
             font-weight: 300;
             font-size: 14px;
             line-height: 22px;
+        }
+    }
+
+    .game-seasons {
+        padding-top: 50px;
+        padding-bottom: 85px;
+        text-align: center;
+
+        &__info {
+            align-items: center;
+        }
+
+        &__heading {
+            font-size: 32px;
+            line-height: 39px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        &__img {
+            margin-top: 64px;
+            max-width: 344px;
         }
     }
 }

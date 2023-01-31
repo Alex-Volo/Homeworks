@@ -24,7 +24,7 @@ body {
 }
 
 .top {
-  background: url(../img/background_top.jpg) center/cover no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%), url(0001.jpg);
+  background: url(../img/background_top.jpg) center/cover no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%);
   height: 1024px;
 }
 .top__header {
@@ -59,6 +59,7 @@ body {
 }
 .top__btn:hover {
   background-color: #EB443F;
+  cursor: pointer;
 }
 
 .menu {
@@ -97,7 +98,57 @@ body {
   line-height: 32px;
 }
 
-@media (max-width: 425px) {
+.game-seasons {
+  padding-top: 230px;
+  padding-bottom: 230px;
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 130px;
+       column-gap: 130px;
+  background-color: #000915;
+}
+.game-seasons__info {
+  height: 334px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.game-seasons__heading {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+}
+.game-seasons__text {
+  margin-top: 32px;
+  max-width: 584px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+}
+.game-seasons__btn {
+  font-family: Montserrat, sans-serif;
+  border: none;
+  background: #9C0332;
+  color: #FFFFFF;
+  margin-top: 32px;
+  width: 234px;
+  height: 48px;
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  transition: background-color 0.4s;
+}
+.game-seasons__btn:hover {
+  background-color: #EB443F;
+  cursor: pointer;
+}
+.game-seasons__btn__img {
+  margin-top: 64px;
+  max-width: 485px;
+}
+
+@media (max-width: 426px) {
   .center {
     padding-left: calc(50% - 171.5px);
     padding-right: calc(50% - 171.5px);
@@ -121,5 +172,25 @@ body {
     font-weight: 300;
     font-size: 14px;
     line-height: 22px;
+  }
+  .game-seasons {
+    padding-top: 50px;
+    padding-bottom: 85px;
+    text-align: center;
+  }
+  .game-seasons__info {
+    align-items: center;
+  }
+  .game-seasons__heading {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .game-seasons__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .game-seasons__img {
+    margin-top: 64px;
+    max-width: 344px;
   }
 }/*# sourceMappingURL=style.css.map */
