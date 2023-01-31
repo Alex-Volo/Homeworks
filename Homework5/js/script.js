@@ -131,5 +131,3 @@ function gameSeason() {
     let monthValue = +prompt('Введите значение месяца (от 1-го до 12-ти');
     alert(getSeason(monthValue));
 }
-
-
