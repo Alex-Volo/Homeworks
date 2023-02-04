@@ -141,10 +141,6 @@ body {
     }
 }
 
-.game-seasons {
-    // Оставил класс на всякий случай
-}
-
 .game-words {
     flex-wrap: wrap-reverse;
 }
@@ -153,11 +149,20 @@ body {
     text-align: center;
     justify-content: center;
     height: 800px;
-    background: url(../img/background_riddles.jpg);
+    background: url(../img/background_riddles.jpg) center / cover no-repeat, #000915;
 
     &__info {
         align-items: center;
     }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80px;
+    background-color: #000915;
 }
 
 @import 'mobile';
