@@ -23,6 +23,25 @@ body {
     padding-right: calc(50% - 600px);
 }
 
+.button {
+    font-family: Montserrat, sans-serif;
+    border: none;
+    background: #9C0332;
+    color: #FFFFFF;
+    width: 234px;
+    height: 48px;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    transition: background-color .4s;
+
+    &:hover {
+        background-color: #EB443F;
+        cursor: pointer;
+    }
+}
+
 .top {
     background: url(../img/background_top.jpg) center / cover no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%);
     height: 1024px;
@@ -41,30 +60,13 @@ body {
     &__lead {
         max-width: 480px;
         margin-top: 32px;
+        margin-bottom: 44px;
         font-weight: 300;
         font-size: 18px;
         line-height: 32px;
     }
 
-    &__btn {
-        font-family: Montserrat, sans-serif;
-        border: none;
-        background: #9C0332;
-        color: #FFFFFF;
-        margin-top: 44px;
-        width: 234px;
-        height: 48px;
-        border-radius: 30px;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
-        transition: background-color .4s;
 
-        &:hover {
-            background-color: #EB443F;
-            cursor: pointer;
-        }
-    }
 }
 
 .menu {
@@ -109,7 +111,8 @@ body {
     }
 }
 
-.game-seasons {
+.game {
+
     padding-top: 230px;
     padding-bottom: 230px;
     display: flex;
@@ -118,9 +121,9 @@ body {
     background-color: #000915;
 
     &__info {
-        height: 334px;
         display: flex;
         flex-direction: column;
+        row-gap: 32px;
         justify-content: center;
     }
 
@@ -131,36 +134,29 @@ body {
     }
 
     &__text {
-        margin-top: 32px;
         max-width: 584px;
         font-weight: 300;
         font-size: 18px;
         line-height: 32px;
     }
+}
 
-    &__btn {
-        font-family: Montserrat, sans-serif;
-        border: none;
-        background: #9C0332;
-        color: #FFFFFF;
-        margin-top: 32px;
-        width: 234px;
-        height: 48px;
-        border-radius: 30px;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
-        transition: background-color .4s;
+.game-seasons {
+    // Оставил класс на всякий случай
+}
 
-        &:hover {
-            background-color: #EB443F;
-            cursor: pointer;
-        }
+.game-words {
+    flex-wrap: wrap-reverse;
+}
 
-        &__img {
-            margin-top: 64px;
-            max-width: 485px;
-        }
+.game-riddles {
+    text-align: center;
+    justify-content: center;
+    height: 800px;
+    background: url(../img/background_riddles.jpg);
+
+    &__info {
+        align-items: center;
     }
 }
 

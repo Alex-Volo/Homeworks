@@ -23,6 +23,24 @@ body {
   padding-right: calc(50% - 600px);
 }
 
+.button {
+  font-family: Montserrat, sans-serif;
+  border: none;
+  background: #9C0332;
+  color: #FFFFFF;
+  width: 234px;
+  height: 48px;
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  transition: background-color 0.4s;
+}
+.button:hover {
+  background-color: #EB443F;
+  cursor: pointer;
+}
+
 .top {
   background: url(../img/background_top.jpg) center/cover no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%);
   height: 1024px;
@@ -39,27 +57,10 @@ body {
 .top__lead {
   max-width: 480px;
   margin-top: 32px;
+  margin-bottom: 44px;
   font-weight: 300;
   font-size: 18px;
   line-height: 32px;
-}
-.top__btn {
-  font-family: Montserrat, sans-serif;
-  border: none;
-  background: #9C0332;
-  color: #FFFFFF;
-  margin-top: 44px;
-  width: 234px;
-  height: 48px;
-  border-radius: 30px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  transition: background-color 0.4s;
-}
-.top__btn:hover {
-  background-color: #EB443F;
-  cursor: pointer;
 }
 
 .menu {
@@ -98,7 +99,7 @@ body {
   line-height: 32px;
 }
 
-.game-seasons {
+.game {
   padding-top: 230px;
   padding-bottom: 230px;
   display: flex;
@@ -107,45 +108,36 @@ body {
        column-gap: 130px;
   background-color: #000915;
 }
-.game-seasons__info {
-  height: 334px;
+.game__info {
   display: flex;
   flex-direction: column;
+  row-gap: 32px;
   justify-content: center;
 }
-.game-seasons__heading {
+.game__heading {
   font-weight: 700;
   font-size: 48px;
   line-height: 59px;
 }
-.game-seasons__text {
-  margin-top: 32px;
+.game__text {
   max-width: 584px;
   font-weight: 300;
   font-size: 18px;
   line-height: 32px;
 }
-.game-seasons__btn {
-  font-family: Montserrat, sans-serif;
-  border: none;
-  background: #9C0332;
-  color: #FFFFFF;
-  margin-top: 32px;
-  width: 234px;
-  height: 48px;
-  border-radius: 30px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  transition: background-color 0.4s;
+
+.game-words {
+  flex-wrap: wrap-reverse;
 }
-.game-seasons__btn:hover {
-  background-color: #EB443F;
-  cursor: pointer;
+
+.game-riddles {
+  text-align: center;
+  justify-content: center;
+  height: 800px;
+  background: url(../img/background_riddles.jpg);
 }
-.game-seasons__btn__img {
-  margin-top: 64px;
-  max-width: 485px;
+.game-riddles__info {
+  align-items: center;
 }
 
 @media (max-width: 426px) {
@@ -173,23 +165,23 @@ body {
     font-size: 14px;
     line-height: 22px;
   }
-  .game-seasons {
+  .game {
     padding-top: 50px;
     padding-bottom: 85px;
     text-align: center;
   }
-  .game-seasons__info {
+  .game__info {
     align-items: center;
   }
-  .game-seasons__heading {
+  .game__heading {
     font-size: 32px;
     line-height: 39px;
   }
-  .game-seasons__text {
+  .game__text {
     font-size: 14px;
     line-height: 22px;
   }
-  .game-seasons__img {
+  .game__img {
     margin-top: 64px;
     max-width: 344px;
   }

@@ -21,7 +21,7 @@
         <p class="top__lead">Вам предстоит пройти несколько увлекательных игр. Если готов нажимай <b>поехали</b> и
             <b>приступай</b>
         </p>
-        <button type="submit" class="top__btn">Поехали!</button>
+        <button type="submit" class="button">Поехали!</button>
     </section>
     <!-- Меню или навигация, как я понял -->
     <nav class="menu center">
@@ -35,15 +35,31 @@
                 <p>Игра 3</p>
             </a></div>
     </nav>
-    <div class="game-seasons center">
-        <div class="game-seasons__info">
-            <h2 class="game-seasons__heading">Времена года!</h2>
-            <p class="game-seasons__text">Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к какому
+    <section class="game game-seasons center">
+        <div class="game__info">
+            <h2 class="game__heading">Времена года!</h2>
+            <p class="game__text">Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к какому
                 времени года он относится</p>
-            <button onclick="gameSeason()" class="game-seasons__btn">Играть</button>
+            <button onclick="gameSeason()" class="button">Играть</button>
         </div>
-        <img src="img/game-seasons.svg" alt="game-seasons" class="game-seasons__img">
-    </div>
+        <img src="img/game-seasons.svg" alt="game-seasons" class="game__img">
+    </section>
+    <section class="game game-words center">
+            <img class="game__img" src=" img/game-words.svg" alt="game-words">
+        <div class="game__info">
+            <h2 class="game__heading">Запомни слова</h2>
+            <p class="game__text">При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо
+                запомнить.</p>
+            <button onclick="gameSeason()" class="button">Играть</button>
+        </div>
+    </section>
+    <section class="game game-riddles center">
+        <div class="game__info game-riddles__info">
+            <h2 class="game__heading">Игра в загадки</h2>
+            <p class="game__text">Компьютер загадывает загадку, вам необходимо ее угадать, если вы дадите не правильный ответ, то компьютер даст вам подсказку. У вас будет три попытки и две подсказки.</p>
+            <button onclick="gameSeason()" class="button">Играть</button>
+        </div>
+    </section>
 
     <script src="js/script.js"></script>
 </body>
