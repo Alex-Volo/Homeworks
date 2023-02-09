@@ -1,0 +1,62 @@
+@media (max-width: 426px) {
+    .center {
+        padding-left: calc(50% - 171.5px);
+        padding-right: calc(50% - 171.5px);
+    }
+
+    .top {
+        height: 735px;
+        background: url(../img/background_top_mobile.jpg) center / cover no-repeat;
+        text-align: center;
+
+        &__header {
+            padding-top: 240px;
+            max-width: 780px;
+        }
+
+        &__heading {
+            font-size: 32px;
+            line-height: 39px;
+        }
+
+        &__lead {
+            max-width: 480px;
+            margin-top: 32px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+    .game {
+        padding-top: 50px;
+        padding-bottom: 85px;
+        text-align: center;
+
+        &__info {
+            align-items: center;
+        }
+
+        &__heading {
+            font-size: 32px;
+            line-height: 39px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        &__img {
+            margin-top: 64px;
+            max-width: 344px;
+        }
+    }
+
+    .game-riddles {
+        text-align: center;
+        justify-content: center;
+        height: 800px;
+        background: url(../img/background_riddles_mobile.jpg) center / cover no-repeat;
+    }
+}
