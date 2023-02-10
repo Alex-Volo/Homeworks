@@ -1,20 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework 7</title>
 </head>
+
 <body>
-    
+
     <script>
-        
+
         // ЗАДАНИЕ 1
+
         // Преобразуйте строку js в верхний регистр JS.
+        console.log('Преобразуйте строку js в верхний регистр'.toUpperCase());
 
 
+        // ЗАДАНИЕ 2
+
+        /*Создайте функцию, которая в качестве параметров принимает массив строк и строку. 
+        Возвращать данная функция должна новый массив, содержащий только те элементы переданного 
+        массива, которые начинаются с переданной строки. Регистр символов не должен влиять.*/
+
+        const findStartsWith = (arr, string) => {
+            const resultArr = [];
+            arr.forEach(element => {
+                if (element.toLowerCase().startsWith(string.toLowerCase())) resultArr.push(element);
+            });
+            return resultArr;
+        }
+
+        // Проверка
+        // console.log(findStartsWith(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'));
+        // console.log(findStartsWith(['яблоко', 'груша', 'гриб', 'огурец'], 'гру'));
+        // console.log(findStartsWith(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино'));
+
+
+        // ЗАДАНИЕ 3
+
+        /*Округлите число 32.58884:
+        До меньшего целого
+        До большего целого
+        До ближайшего целого*/
+
+        const number = 32.58884;
+
+        console.log(Math.floor(number));
+        console.log(Math.ceil(number));
+        console.log(Math.round(number));
+
+
+        // ЗАДАНИЕ 4
+
+        /*Даны числа 52, 53, 49, 77, 21, 32. Необходимо найти среди этих чисел 
+        наименьшее и наибольшее числа и вывести их в консоль.*/
+
+        const numbers = [52, 53, 49, 77, 21, 32];
+        console.log(Math.min(...numbers));
+        console.log(Math.max(...numbers));
+
+
+        // ЗАДАНИЕ 5
+
+        // Создайте функцию, которая будет выводить в консоль рандомное число от 1 до 10
+
+        const rangeMin = 1;
+        const rangeMax = 10;
+
+        console.log(Math.floor(Math.random() * (rangeMax - rangeMin + 1) + rangeMin));
+
+
+        // ЗАДАНИЕ 6
+
+        /*Напишите функцию, которая будет принимать на вход целое число, 
+        а возвращать массив случайных целых чисел от 0 до переданного числа. 
+        Длина массива должна быть в 2 раза меньше переданного числа.*/
+
+        const getWeirdRandomArray = (number) => {
+            const resultArr = [];
+
+            for (let i = 0; i < Math.round(number / 2); i++) {
+                resultArr.push(Math.floor(Math.random() * (number + 1)));
+            }
+            return resultArr;
+        }
+
+        // Проверка
+        // for (let i = 1; i <= 10; i++) {
+        //     console.log(getWeirdRandomArray(i));
+        // }
+
+
+        // ЗАДАНИЕ 7
+
+        /*Напишите функцию, которая на вход принимает 2 целых числа, а в качестве результата возвращает случайное целое число в этом диапазоне.*/
+
+        const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+
+        console.log(getRandomNumber(1, 10));
+
+
+        // ЗАДАНИЕ 8
+
+        /*Выведите в консоль текущую дату в стандартном режиме. Используйте 
+        один из трех рассмотренных в уроке способов.*/
+
+        let tDate = new Date;
+        console.log(Date);
+
+
+        // ЗАДАНИЕ 9
+        /*Создайте переменную currentDate и сохраните в нее текущую дату. 
+        Выведите дату, которая наступит через 73 дня после текущей.*/
+
+        let currentDate = new Date();
+
+        let additionDate = currentDate.setDate(currentDate.getDate() + 73);
+
+        let dateX = new Date(additionDate);
+
+        console.log(dateX); //Перемудрил, и что-то в голову нормальных идей не приходит, но работает
+
+
+        // ЗАДАНИЕ 10
 
     </script>
 </body>
+
 </html>
