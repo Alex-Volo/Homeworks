@@ -1,4 +1,43 @@
 "use strict";
+// ЗАДАНИЕ 11
+/*Дан массив слов:['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин']
+Необходимо перемешать элементы массива и вывести на экран пользователю с использованием 
+alert();
+Спросить у пользователя:
+Чему равнялся первый элемент массива?
+Чему равнялся последний элемент массива?
+Поздравить пользователя, если он угадал оба элемента.
+Если пользователь угадал только одно слово, сообщить: «Вы были близки к победе!»
+Если не угадал ни одного элемента, сообщить, что пользователь ответил неверно.*/
+
+
+function memoryGame() {
+    const wordsArray = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+
+    (function () {
+        for (let i = wordsArray.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [wordsArray[i], wordsArray[j]] = [wordsArray[j], wordsArray[i]];
+        }
+    }());
+
+    alert(wordsArray.join(', '));
+
+    const userFirstAnswer = prompt('Чему равнялся первый элемент массива?', '');
+    const userSecondAnswer = prompt('Чему равнялся последний элемент массива?', '');
+
+    if ((userFirstAnswer.toLowerCase().trim() === wordsArray[0].toLowerCase()) &&
+        userSecondAnswer.toLowerCase().trim() === wordsArray[wordsArray.length - 1].toLowerCase()) {
+        alert('Всё верно! У Вас отличная память!');
+
+    } else if (userFirstAnswer.toLowerCase().trim() === wordsArray[0].toLowerCase() ||
+        userSecondAnswer.toLowerCase().trim() === wordsArray[wordsArray.length - 1].toLowerCase()) {
+        alert('Вы были близки к победе!');
+
+    } else {
+        alert('Возможно в следующий раз Вам повезёт больше!');
+    }
+}
 
 // Первая игра
 
