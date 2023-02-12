@@ -109,8 +109,8 @@
         /*Выведите в консоль текущую дату в стандартном режиме. Используйте 
         один из трех рассмотренных в уроке способов.*/
 
-        let tDate = new Date;
-        console.log(Date);
+        let currDate = new Date;
+        console.log(currDate);
 
 
         // ЗАДАНИЕ 9
@@ -119,11 +119,9 @@
 
         let currentDate = new Date();
 
-        let additionDate = currentDate.setDate(currentDate.getDate() + 73);
+        currentDate.setDate(currentDate.getDate() + 73);
 
-        let dateX = new Date(additionDate);
-
-        console.log(dateX); //Перемудрил, и что-то в голову нормальных идей не приходит, но работает
+        console.log(currentDate);
 
 
         // ЗАДАНИЕ 10
@@ -133,12 +131,14 @@
         Время, которое будет выведено, также хранится в объекте Date.*/
 
         const formatDate = (date) => {
-            let rusMonths = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
-            let newDate = ['Дата:', date.getDate(), rusMonths[date.getMonth()], date.getFullYear(), 'года\nВремя:', date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()];
-            newDate = newDate.join(' ');
-            return newDate;
+            const locale = 'ru-RU';
+            const dateFormat = { day: 'numeric', month: 'long', year: 'numeric' };
+            return `Дата: ${date.toLocaleDateString(locale, dateFormat)} - это ${date.toLocaleDateString(locale, { weekday: 'long' })}.
+Время: ${date.toLocaleTimeString(locale)}`
         }
-        console.log(formatDate(currentDate));
+        console.log(formatDate(new Date()));
+
+
 
     // ЗАДАНИЕ 11
         /*Выполненное задание находится в файле games.js*/
